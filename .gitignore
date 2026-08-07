@@ -1,4 +1,7 @@
 devlog.txt
+CHANGELOG.md
+CODE_EXPLAINED.txt
+LIBRARY_EXPLAINED.txt
 __pycache__/
 *.pyc
 *.pyo
