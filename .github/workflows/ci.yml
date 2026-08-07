@@ -1,6 +1,10 @@
 name: tests
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
 
 jobs:
   test:
@@ -19,3 +23,22 @@ jobs:
       - run: pip install -e ".[dev]"
 
       - run: pytest tests/ --cov=evalbridge --cov-report=term-missing -v
+
+  publish:
+    needs: test
+    if: github.event_name == 'release' && github.event.action == 'published'
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install build
+      - run: python -m build
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
