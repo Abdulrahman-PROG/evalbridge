@@ -5,7 +5,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/evalbridge.svg)](https://pypi.org/project/evalbridge/)
 [![Python versions](https://img.shields.io/pypi/pyversions/evalbridge.svg)](https://pypi.org/project/evalbridge/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![CI](https://github.com/YOUR_USERNAME/evalbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/evalbridge/actions)
+[![CI](https://github.com/Abdulrahman-PROG/evalbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/Abdulrahman-PROG/evalbridge/actions)
 
 ## The problem
 
@@ -224,7 +224,7 @@ exp.set_challenger(HFSource("org/churn-model-v2", revision="main"))
 ## Development
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/evalbridge
+git clone https://github.com/Abdulrahman-PROG/evalbridge
 cd evalbridge
 pip install -e ".[dev]"
 pytest tests/
